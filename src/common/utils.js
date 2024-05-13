@@ -410,7 +410,7 @@ const renderError = (message, secondaryMessage = "", options = {}) => {
  */
 const wrapTextMultiline = (text, width = 59, maxLines = 3) => {
   const fullWidthComma = "，";
-  const encoded = encodeHTML(text);
+  const encoded = text; // encodeHTML(text);
   const isChinese = encoded.includes(fullWidthComma);
 
   let wrapped = [];
