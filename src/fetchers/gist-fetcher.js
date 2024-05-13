@@ -25,6 +25,7 @@ query gistInfo($gistName: String!) {
                 language {
                     name
                 }
+                text
                 size
             }
         }
@@ -107,6 +108,7 @@ const fetchGist = async (id) => {
     language: calculatePrimaryLanguage(data.files),
     starsCount: data.stargazerCount,
     forksCount: data.forks.totalCount,
+    text: data.files[Object.keys(data.files)[0]].text,
   };
 };
 

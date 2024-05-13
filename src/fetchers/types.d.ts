@@ -5,6 +5,7 @@ export type GistData = {
   language: string | null;
   starsCount: number;
   forksCount: number;
+  text: string;
 };
 
 export type RepositoryData = {

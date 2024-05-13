@@ -42,7 +42,7 @@ const HEADER_MAX_LENGTH = 35;
  * @returns {string} Gist card.
  */
 const renderGistCard = (gistData, options = {}) => {
-  const { name, nameWithOwner, description, language, starsCount, forksCount } =
+  const { name, nameWithOwner, description, language, starsCount, forksCount, text } =
     gistData;
   const {
     title_color,
@@ -69,7 +69,7 @@ const renderGistCard = (gistData, options = {}) => {
 
   const lineWidth = 59;
   const linesLimit = 10;
-  const desc = parseEmojis(description || "No description provided");
+  const desc = parseEmojis(text || "No description provided");
   const multiLineDescription = wrapTextMultiline(desc, lineWidth, linesLimit);
   const descriptionLines = multiLineDescription.length;
   const descriptionSvg = multiLineDescription
