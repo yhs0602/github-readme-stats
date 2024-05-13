@@ -67,7 +67,7 @@ const renderGistCard = (gistData, options = {}) => {
       theme,
     });
 
-  const lineWidth = 59;
+  const lineWidth = 80;
   const linesLimit = 10;
   const desc = parseEmojis(text || "No description provided");
   const multiLineDescription = wrapTextMultiline(desc, lineWidth, linesLimit);
