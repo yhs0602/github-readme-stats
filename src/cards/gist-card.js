@@ -26,7 +26,7 @@ const require = createRequire(import.meta.url);
 const languageColors = require("../common/languageColors.json"); // now works
 
 const ICON_SIZE = 16;
-const CARD_DEFAULT_WIDTH = 400;
+const CARD_DEFAULT_WIDTH = 440;
 const HEADER_MAX_LENGTH = 35;
 
 /**
